@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius">5</dimen>
+    <dimen name="buttonToolbar">40dp</dimen>
+    <dimen name="paddingButton">5dp</dimen>
+    <dimen name="marginButton">8dp</dimen>
+
+</resources>

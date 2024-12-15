@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonC">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:fontFamily">@font/my_font</item>
+        <item name="android:background">@drawable/grad_bn_num</item>
+    </style>
+
+    <style name="buttonC.fun">
+        <item name="android:background">@drawable/grad_bn_fun</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="buttonC.opergreed">
+        <item name="android:background">@drawable/grad_bn_oper</item>
+    </style>
+
+    <style name="buttonC.clear">
+        <item name="android:background">@drawable/grad_bn_clear</item>
+    </style>
+
+    <style name="buttonC.clear.back">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ckSelectAll" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/teal_200</item>
+    </style>
+
+    <!--    // 6"-->
+    <style name="buttonC.4">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="buttonC.4.opergreed">
+        <item name="android:background">@drawable/grad_bn_oper</item>
+    </style>
+
+    <style name="buttonC.fun.4">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="buttonC.4.clear">
+        <item name="android:background">@drawable/grad_bn_clear</item>
+    </style>
+
+    <style name="buttonC.clear.back.4">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <!--    // 7"-->
+    <style name="buttonC.6">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="buttonC.6.opergreed">
+        <item name="android:background">@drawable/grad_bn_oper</item>
+    </style>
+
+    <style name="buttonC.fun.6">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="buttonC.6.clear">
+        <item name="android:background">@drawable/grad_bn_clear</item>
+    </style>
+
+    <style name="buttonC.clear.back.6">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <!--    // 10"-->
+    <style name="buttonC.7">
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="buttonC.7.opergreed">
+        <item name="android:background">@drawable/grad_bn_oper</item>
+    </style>
+
+    <style name="buttonC.fun.7">
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="buttonC.7.clear">
+        <item name="android:background">@drawable/grad_bn_clear</item>
+    </style>
+
+    <style name="buttonC.clear.back.7">
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <!--    -->
+    <!--  NavigationView  -->
+    <style name="radio_group">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="text_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="text_title.category">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/gray_500</item>
+    </style>
+
+
+</resources>

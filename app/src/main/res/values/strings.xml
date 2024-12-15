@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="st" translatable="false">ST</string>
+    <string name="ht" translatable="false">HT</string>
+
+    <string name="qrt" translatable="false">\u0221</string>
+    <string name="pi" translatable="false">\u03C0</string>
+    <string name="back" translatable="false">\u007f</string>
+    <string name="minus" translatable="false">‒</string>
+    <string name="mul" translatable="false">×</string>
+
+    <string name="todo" translatable="false">TODO</string>
+    <string name="_000" translatable="false">000</string>
+
+    <!--  Menu  -->
+    <string name="screen">Screen</string>
+    <string name="panel">Panel</string>
+    <string name="grad">Gradient</string>
+
+    <string name="keyboard">Keyboard</string>
+    <string name="color">Color</string>
+    <string name="metal">Metal</string>
+    <string name="light">Light</string>
+    <string name="light1">Light</string>
+    <string name="dark">Dark</string>
+    <string name="dark1">Dark</string>
+    <string name="select_oll">Select all</string>
+
+    <string name="all">All</string>
+
+    <string name="font">Font</string>
+    <string name="normal">Normal</string>
+    <string name="led" translatable="false">LED</string>
+
+    <string name="clear_his">Clear</string>
+    <string name="select">Select</string>
+    <string name="line" translatable="false">_______________________</string>
+    <string name="setting">&#160;Стиль</string>
+    <string name="history">&#160;History</string>
+
+    <string name="time" translatable="false">10.07.2021</string>
+    <string name="expr_his" translatable="false">3+2</string>
+    <string name="res_his" translatable="false">=5</string>
+
+    <string name="title">Screen timeout</string>
+    <string name="time_out">Timeout:</string>
+    <string name="time_def">2 minutes</string>
+    <string-array name="time_out">
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+    </string-array>
+
+</resources>

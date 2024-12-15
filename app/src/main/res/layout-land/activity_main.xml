@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--    tools:openDrawer="start">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:visibility="visible"
+        tools:context=".MainActivity">
+
+        <!-- Экран -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/screen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/screen_hk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/edExpr"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:ems="10"
+                android:focusable="true"
+                android:fontFamily="@font/my_font"
+                android:gravity="center_vertical"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="1dp"
+                android:textIsSelectable="false"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvRes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.48"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical|end"
+                android:paddingStart="1dp"
+                android:paddingEnd="20dp"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edExpr" />
+
+            <ImageView
+                android:id="@+id/bnMenu"
+                android:layout_width="@dimen/buttonToolbar"
+                android:layout_height="@dimen/buttonToolbar"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/paddingButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu_black" />
+
+            <ImageView
+                android:id="@+id/bnLeft"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="14dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toStartOf="@id/bnRight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_left_black" />
+
+            <ImageView
+                android:id="@+id/bnRight"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bnLeft"
+                app:srcCompat="@drawable/ic_arrow_right_black" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  7 -->
+        <TextView
+            android:id="@+id/bn7"
+            style="@style/buttonC"
+            android:layout_marginTop="8dp"
+            android:text="7"
+            app:layout_constraintBottom_toTopOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@id/bn8"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/screen"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn8"
+            style="@style/buttonC"
+            android:text="8"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@id/bn9"
+            app:layout_constraintStart_toEndOf="@id/bn7"
+            app:layout_constraintTop_toTopOf="@+id/bn7"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn9"
+            style="@style/buttonC"
+            android:text="9"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@id/bn0"
+            app:layout_constraintStart_toEndOf="@+id/bn8"
+            app:layout_constraintTop_toTopOf="@+id/bn8"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn0"
+            style="@style/buttonC"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@+id/bnCk1"
+            app:layout_constraintStart_toEndOf="@+id/bn9"
+            app:layout_constraintTop_toTopOf="@+id/bn9"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnCk1"
+            style="@style/buttonC.opergreed"
+            android:text="("
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@+id/bnCk2"
+            app:layout_constraintStart_toEndOf="@+id/bn0"
+            app:layout_constraintTop_toTopOf="@+id/bn0"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnCk2"
+            style="@style/buttonC.opergreed"
+            android:text=")"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@+id/bnBack"
+            app:layout_constraintStart_toEndOf="@+id/bnCk1"
+            app:layout_constraintTop_toTopOf="@+id/bnCk1"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnBack"
+            style="@style/buttonC.clear.back"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@+id/bnC"
+            app:layout_constraintStart_toEndOf="@+id/bnCk2"
+            app:layout_constraintTop_toTopOf="@+id/bn7" />
+
+        <TextView
+            android:id="@+id/bnC"
+            style="@style/buttonC.clear"
+            android:text="C"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toStartOf="@+id/bnSin"
+            app:layout_constraintStart_toEndOf="@+id/bnBack"
+            app:layout_constraintTop_toTopOf="@+id/bn7"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnSin"
+            style="@style/buttonC.fun"
+            android:text="Sin"
+            app:layout_constraintBottom_toBottomOf="@+id/bn7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bnC"
+            app:layout_constraintTop_toTopOf="@+id/bn7"
+            tools:ignore="HardcodedText" />
+
+
+        <!-- 4   -->
+        <TextView
+            android:id="@+id/bn4"
+            style="@style/buttonC"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bn5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bn7"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn5"
+            style="@style/buttonC"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bn6"
+            app:layout_constraintStart_toEndOf="@+id/bn4"
+            app:layout_constraintTop_toTopOf="@+id/bn4"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn6"
+            style="@style/buttonC"
+            android:text="6"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnRes"
+            app:layout_constraintStart_toEndOf="@+id/bn5"
+            app:layout_constraintTop_toTopOf="@+id/bn5"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnRes"
+            style="@style/buttonC"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnMul"
+            app:layout_constraintStart_toEndOf="@+id/bn6"
+            app:layout_constraintTop_toTopOf="@+id/bn6"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/bnMul"
+            style="@style/buttonC.opergreed"
+            android:text="@string/mul"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnDiv"
+            app:layout_constraintStart_toEndOf="@+id/bnRes"
+            app:layout_constraintTop_toTopOf="@+id/bnRes" />
+
+        <TextView
+            android:id="@+id/bnDiv"
+            style="@style/buttonC.opergreed"
+            android:text="/"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnBack"
+            app:layout_constraintStart_toEndOf="@+id/bnMul"
+            app:layout_constraintTop_toTopOf="@+id/bnMul"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnMPlus"
+            style="@style/buttonC.fun"
+            android:text="M+"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnMr"
+            app:layout_constraintStart_toEndOf="@+id/bnDiv"
+            app:layout_constraintTop_toTopOf="@+id/bnDiv"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/bnMr"
+            style="@style/buttonC.fun"
+            android:text="MR"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toStartOf="@+id/bnCos"
+            app:layout_constraintStart_toEndOf="@+id/bnMPlus"
+            app:layout_constraintTop_toTopOf="@+id/bn4"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnCos"
+            style="@style/buttonC.fun"
+            android:text="Cos"
+            app:layout_constraintBottom_toBottomOf="@+id/bn4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bnMr"
+            app:layout_constraintTop_toTopOf="@+id/bnMr"
+            tools:ignore="HardcodedText" />
+
+        <!--    1 -->
+        <TextView
+            android:id="@+id/bn1"
+            style="@style/buttonC"
+            android:layout_marginBottom="@dimen/marginButton"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bn2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bn4"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn2"
+            style="@style/buttonC"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bn3"
+            app:layout_constraintStart_toEndOf="@+id/bn1"
+            app:layout_constraintTop_toTopOf="@+id/bn1"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bn3"
+            style="@style/buttonC"
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnDot"
+            app:layout_constraintStart_toEndOf="@+id/bn2"
+            app:layout_constraintTop_toTopOf="@+id/bn2"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnDot"
+            style="@style/buttonC"
+            android:text="."
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnSum"
+            app:layout_constraintStart_toEndOf="@+id/bn3"
+            app:layout_constraintTop_toTopOf="@+id/bn3"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnSum"
+            style="@style/buttonC.opergreed"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnMin"
+            app:layout_constraintStart_toEndOf="@+id/bnDot"
+            app:layout_constraintTop_toTopOf="@+id/bnDot"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnMin"
+            style="@style/buttonC.opergreed"
+            android:text="@string/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnQrt"
+            app:layout_constraintStart_toEndOf="@+id/bnSum"
+            app:layout_constraintTop_toTopOf="@+id/bnSum" />
+
+        <TextView
+            android:id="@+id/bnQrt"
+            style="@style/buttonC.fun"
+            android:text="@string/qrt"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnGroup"
+            app:layout_constraintStart_toEndOf="@+id/bnMin"
+            app:layout_constraintTop_toTopOf="@+id/bnMin" />
+
+        <TextView
+            android:id="@+id/bnGroup"
+            style="@style/buttonC.fun"
+            android:text="ST"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toStartOf="@+id/bnTan"
+            app:layout_constraintStart_toEndOf="@+id/bnQrt"
+            app:layout_constraintTop_toTopOf="@+id/bnQrt"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnTan"
+            style="@style/buttonC.fun"
+            android:text="Tan"
+            app:layout_constraintBottom_toBottomOf="@+id/bn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bnGroup"
+            app:layout_constraintTop_toTopOf="@+id/bnGroup"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/bnPi"
+            style="@style/buttonC.fun"
+            android:text="@string/pi"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/bnTan"
+            app:layout_constraintTop_toTopOf="@+id/bnTan" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grTrig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="bnSin, bnCos, bnTan" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- NavigationView  -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nvNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line0"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSetting"
+                    style="@style/text_title"
+                    android:background="@color/gray_200"
+                    android:text="@string/setting"
+                    app:drawableStartCompat="@drawable/ic_style"
+                    app:layout_constraintBottom_toTopOf="@+id/line1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line0" />
+
+                <View
+                    android:id="@+id/line1"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSetting" />
+
+                <TextView
+                    android:id="@+id/tvScreen"
+                    style="@style/text_title.category"
+                    android:text="@string/screen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                <RadioGroup
+                    android:id="@+id/rgScreen"
+                    style="@style/radio_group"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvScreen">
+
+                    <RadioButton
+                        android:id="@+id/rbScreenLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/light1" />
+
+                    <RadioButton
+                        android:id="@+id/rbScreenDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dark1" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/line2"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgScreen" />
+
+                <!--            -->
+                <TextView
+                    android:id="@+id/tvKeyboard"
+                    style="@style/text_title.category"
+                    android:text="@string/keyboard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgScreen" />
+
+                <RadioGroup
+                    android:id="@+id/rgKeyboard"
+                    style="@style/radio_group"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvKeyboard">
+
+                    <RadioButton
+                        android:id="@+id/rbKeyColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/color" />
+
+                    <RadioButton
+                        android:id="@+id/rbKeyLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/light" />
+
+                    <RadioButton
+                        android:id="@+id/rbKeyDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dark" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/line3"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgKeyboard" />
+
+                <!-- Шрифт -->
+                <TextView
+                    android:id="@+id/tvFont"
+                    style="@style/text_title.category"
+                    android:text="@string/font"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+                <RadioGroup
+                    android:id="@+id/rgFont"
+                    style="@style/radio_group"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFont">
+
+                    <RadioButton
+                        android:id="@+id/rbFontNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/normal" />
+
+                    <RadioButton
+                        android:id="@+id/rbFontLed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/led" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/line4"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgFont" />
+
+                <!--  История  -->
+                <TextView
+                    android:id="@+id/tvHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/history"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_history"
+                    app:layout_constraintBottom_toTopOf="@+id/line5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+                <View
+                    android:id="@+id/line5"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHistory" />
+
+                <LinearLayout
+                    android:id="@+id/llTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line5">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/time_out"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_time_black" />
+
+                    <TextView
+                        android:id="@+id/tvTimeOut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_def"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line6"
+                    style="@style/line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llTime" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

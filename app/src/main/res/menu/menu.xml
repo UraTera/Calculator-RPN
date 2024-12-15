@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view" >
+
+
+    <!-- Экран -->
+    <item
+        android:id="@+id/heading"
+        android:textStyle="bold"
+        android:title="@string/screen">  Экран
+
+        <menu>
+            <group
+                android:id="@+id/group1"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mnPanel"
+                    android:checked="true"
+                    android:title="@string/light1" />
+                <item
+                    android:id="@+id/mnGrad"
+                    android:title="@string/dark1" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Клавиатура -->
+    <item
+        android:id="@+id/keyboard"
+        android:textStyle="bold"
+        android:title="@string/keyboard">
+
+        <menu>
+            <group
+                android:id="@+id/group2"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mnColor"
+                    android:checked="true"
+                    android:title="@string/color" />
+                <item
+                    android:id="@+id/mnLight"
+                    android:title="@string/light" />
+                <item
+                    android:id="@+id/mnBlack"
+                    android:title="@string/dark" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- Шрифт -->
+    <item
+        android:id="@+id/font"
+        android:textStyle="bold"
+        android:title="@string/font">
+
+        <menu>
+            <group
+                android:id="@+id/group3"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mnNormal"
+                    android:checked="true"
+                    android:title="@string/normal" />
+                <item
+                    android:id="@+id/mnLed"
+                    android:title="@string/led" />
+            </group>
+        </menu>
+    </item>
+    <!-- Разделитель -->
+    <item
+        android:enabled="false"
+        android:title="@string/line" />
+    <!-- История -->
+    <item
+        android:id="@+id/mnHistory"
+        android:title="@string/history" />
+
+
+</menu>

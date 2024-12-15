@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Калькулятор</string>
+
+    <!--  Menu  -->
+    <string name="screen">Экран</string>
+    <string name="panel">Панель</string>
+    <string name="grad">Градиент</string>
+
+    <string name="keyboard">Клавиатура</string>
+    <string name="color">Цветная</string>
+    <string name="metal">Металл</string>
+    <string name="light">Светлая</string>
+    <string name="light1">Светлый</string>
+    <string name="dark">Темная</string>
+    <string name="dark1">Темный</string>
+    <string name="select_oll">Выбрать все</string>
+
+    <string name="all">Все</string>
+    <string name="font">Шрифт</string>
+    <string name="normal">Обычный</string>
+    <string name="clear_his">Очистить</string>
+    <string name="select">Выбрать</string>
+
+    <string name="setting">&#160;Стиль</string>
+    <string name="history">&#160;История</string>
+
+    <string name="title">Тайм-аут экрана</string>
+    <string name="time_out">Тайм-аут:</string>
+    <string name="time_def">2 минуты</string>
+
+    <string-array name="time_out">
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минута</item>
+        <item>2 минуты</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+    </string-array>
+
+</resources>
